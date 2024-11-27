@@ -3,6 +3,7 @@
 This project implements a **ISL to Speech System** using YOLOv5 and LSTM layers to detect **25 Indian Sign Languages**, including **15 words** and **10 numbers**, with an accuracy of **85%**. The system leverages a fine-tuned YOLOv5 model for precise hand detection and LSTM layers for sequence mechanism to enhance recognition performance.
 
 ## Output
+![Output 1](output/ou2.gif) ![Output 2](output/out1.gif)
 
 ## Installation
 
@@ -29,5 +30,13 @@ This project implements a **ISL to Speech System** using YOLOv5 and LSTM layers 
 
 5. **Run the Detection System**  
    Execute the detection system by running the following command in the YOLOv5 directory:  
-   ```bash
-   python detect.py --weights weights/best.pt --source 0 
+
+   For **CPU**:  
+     ```bash
+     python detect.py --weights weights/best.pt --source 0 --device cpu
+     ```
+
+   For **GPU** :  
+     ```bash
+     python detect.py --weights weights/best.pt --source 0 --device 0
+     ```
